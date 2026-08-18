@@ -75,11 +75,8 @@ function signupauth(e) {
     localStorage.setItem("USER", JSON.stringify(user));
 
     alert("Signup successful");
-
-    // Signup ke baad login form dikhao
-    showLogin();
+showLogin();
 }
-
 
 // -------- TOGGLE FORMS --------
 function showLogin() {
