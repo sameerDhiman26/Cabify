@@ -49,3 +49,4 @@ function signupauth(e) {
 
     window.location.href = "login.html";
 }
+
