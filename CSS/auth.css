@@ -9,6 +9,7 @@ body{
   background:#0f172a;
   color:#fff;
   min-height:100vh;
+  overflow: hidden;
 }
 
 .signup-page{
@@ -46,7 +47,7 @@ body{
 }
 
 .logo i{
-  color:#2563eb;
+  color:rgb(37, 99, 235);
   font-size:34px;
 }
 
@@ -295,3 +296,6 @@ body{
   text-decoration:underline;
 }
 
+.hidden{
+  display:none;
+}
