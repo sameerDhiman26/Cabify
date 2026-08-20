@@ -17,6 +17,7 @@ function loginauth(e) {
 
     if (email === savedUser.email && password === savedUser.password) {
         alert("Login successful");
+        window.location.href="dashboard.html";
         console.log("Remember:", remember);
     } else {
         alert("Invalid email or password");
