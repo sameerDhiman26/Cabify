@@ -13,7 +13,7 @@ sidebar.addEventListener("click",(e)=>{
         })
          e.target.classList.add("active")
     }
-    if(e.target.classList.contains("find-btn")){
+    if(e.target.classList.contains("trip-btn")){
         findRidePage.style.display = "block";
         homePage.style.display = "none";
         document.querySelectorAll(".menu-item").forEach((menu)=>{
@@ -22,3 +22,18 @@ sidebar.addEventListener("click",(e)=>{
         e.target.classList.add("active")
     }
 })
+
+let user = localStorage.getItem("USER");
+user = JSON.parse(user);
+let welcomeLine = document.getElementById("welcomeLine")
+welcomeLine.innerHTML = `Welcome Back, ${user.name} 👋`;
+
+let str = "Sameer";
+
+let chr = str.split("")
+
+let userIcon = chr[0];
+
+let profileIcon = document.querySelector(".userIcon")
+
+profileIcon.innerHTML = userIcon
