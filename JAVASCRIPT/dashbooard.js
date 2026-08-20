@@ -28,12 +28,8 @@ user = JSON.parse(user);
 let welcomeLine = document.getElementById("welcomeLine")
 welcomeLine.innerHTML = `Welcome Back, ${user.name} 👋`;
 
-let str = "Sameer";
-
-let chr = str.split("")
-
-let userIcon = chr[0];
-
+let str = user.name;
+console.log(str)
+let userIcon = str[0];
 let profileIcon = document.querySelector(".userIcon")
-
-profileIcon.innerHTML = userIcon
+profileIcon.innerHTML = userIcon;
