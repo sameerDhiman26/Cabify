@@ -1,6 +1,6 @@
 let homePage = document.querySelector(".homepage");
 let findRidePage = document.querySelector(".findRide");
-let sidebar = document.querySelector(".sidebar");
+let sidebar = document.querySelector(".sidebar")
 
 
 sidebar.addEventListener("click",(e)=>{
