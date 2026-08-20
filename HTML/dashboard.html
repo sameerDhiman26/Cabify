@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabify Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../CSS/rides.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-car"></i>
+            <h2>CabifyPool</h2>
+        </div>
+
+        <ul>
+
+            <li class="active menu-item home-btn"><i class="fa-solid fa-house "></i> Home</li>
+
+            <li class="find-btn menu-item"><i class="fa-solid fa-location-dot "></i> Find Ride</li>
+
+            <li class="menu-item offer-btn"><i class="fa-solid fa-car-side "></i> Offer Ride</li>
+
+            <li class="menu-item trip-btn"><i class="fa-solid fa-road"></i> My Trips</li>
+
+            <li class="message-btn menu-item"><i class="fa-solid fa-message"></i> Messages</li>
+
+            <li><i class="fa-solid fa-wallet" ></i> Wallet</li>
+
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+
+            <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <!-- Navbar -->
+         <div class="homepage">
+
+        <div class="topbar">
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Search destination">
+
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <img src="https://i.pravatar.cc/100" alt="">
+
+            </div>
+
+        </div>
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div>
+
+                <h1>Welcome Back, Dishant 👋</h1>
+
+                <p>
+                    Ready for your next ride? Find affordable rides or
+                    offer your own in seconds.
+                </p>
+
+                <button>Find Ride</button>
+
+            </div>
+
+        </section>
+
+        <!-- Stats -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <i class="fa-solid fa-route"></i>
+
+                <h2>12</h2>
+
+                <p>Trips Completed</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h2>₹4,580</h2>
+
+                <p>Total Savings</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h2>4.9</h2>
+
+                <p>Your Rating</p>
+
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="actions">
+
+            <div class="action">
+
+                <i class="fa-solid fa-car"></i>
+
+                <h3>Offer Ride</h3>
+
+            </div>
+
+            <div class="action">
+
+                <i class="fa-solid fa-location-arrow"></i>
+
+                <h3>Book Ride</h3>
+
+            </div>
+
+            <div class="action">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>My Carpools</h3>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Rides -->
+
+        <section class="rides">
+
+            <h2>Recent Rides</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>From</th>
+
+                    <th>To</th>
+
+                    <th>Date</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Delhi</td>
+
+                    <td>Chandigarh</td>
+
+                    <td>22 Aug</td>
+
+                    <td><span class="completed">Completed</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Mohali</td>
+
+                    <td>Patiala</td>
+
+                    <td>25 Aug</td>
+
+                    <td><span class="upcoming">Upcoming</span></td>
+
+                </tr>
+
+            </table>
+
+        </section>
+        </div>
+        <div class="findRide">
+            <section class="top-main">
+        <div class="top-header">
+          <h2>Rides Given</h2>
+          <p>Trips you have published and their booked passengers</p>
+        </div>
+        <a href="" class="offer-link">Offer new Ride</a>
+      </section>
+
+      <section class="filter-section">
+        <button class="filter-btn active">Active Rides</button>
+        <button class="filter-btn">Completed</button>
+        <button class="filter-btn">Cancelled</button>
+      </section>
+      <section class="booking-box">
+        <section id="ridesList" class="empty-box">
+          <p>No rides offered yet</p>
+        </section>
+      </section>
+        </div>
+
+    </main>
+
+</div>
+<script src="../JAVASCRIPT/dashbooard.js"></script>
+</body>
+</html>
