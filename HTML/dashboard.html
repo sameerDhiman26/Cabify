@@ -9,8 +9,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="../CSS/rides.css" rel="stylesheet">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/findRide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
         <div class="logo">
             <i class="fa-solid fa-car"></i>
-            <h2>CabifyPool</h2>
+            <h2>Cabify</h2>
         </div>
 
         <ul>
@@ -208,7 +208,9 @@
 
         </section>
         </div>
-        <div class="findRide">
+
+        <!-- my trips page -->
+        <div class="tripPage"> 
             <section class="top-main">
         <div class="top-header">
           <h2>Rides Given</h2>
@@ -229,9 +231,94 @@
       </section>
         </div>
 
+        <!-- find ride page -->
+         <div class="findRide">
+            <!-- <div class="findRide-form-container">
+                
+            </div> -->
+           <div class="quote-container">
+            <div class="quote-content">
+            <h1>Find a ride that <br>
+                <span class="glow">Fits your journey.</span>
+            </h1>
+            </div>
+           </div>
+
+           <div class="form-container">
+                <div class="heading">
+                    <p>Search Rides</p>
+                    <span>Where do you want to go?</sapn>
+                </div>
+                <div class="main-form">
+
+                    <div class="main-input-box">
+                        <label for="from" class="label-text">From</label>
+                        <div class="input-box">
+                        <i class="fa-solid fa-circle-dot"></i>
+                        <input type="text" id="from" placeholder="Enter starting place">
+                        </div>
+                    </div>
+
+                    <div class="main-input-box">
+                        <label for="to" class="label-text">To</label>
+                        <div class="input-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="to" placeholder="Enter Destination">
+                        </div>
+                    </div>
+
+                    <div class="main-input-box">
+                        <label for="date" class="label-text">Date</label>
+                        <div class="input-box">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date" id="date">
+                        </div>
+                    </div>
+
+                    <div class="main-input-box">
+                        <label for="time" class="label-text">Time</label>
+                        <div class="input-box">
+                        <i class="fa-regular fa-clock"></i>
+                        <input type="time" id="time" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="main-input-box">
+                        <label for="to" class="label-text">Passengers</label>
+                        <div class="input-box">
+                        <i class="fa-solid fa-user-group"></i>
+                        <select class="passenger-select">
+                            <option value="1">1 passenger</option>
+                            <option value="2">2 passengers</option>
+                            <option value="3">3 passengers</option>
+                            <option value="4">4 passengers</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Find Rides
+                </button>
+
+
+                </div>
+           </div>
+
+           <div class="other-rides-container">
+            <h2>Other rides you may like.</h2>
+            <div id="card-container">
+                
+            </div>
+           </div>
+
+        
+
+         </div>
     </main>
 
 </div>
 <script src="../JAVASCRIPT/dashbooard.js"></script>
+<script src="../JAVASCRIPT/rides.js"></script>
 </body>
 </html>

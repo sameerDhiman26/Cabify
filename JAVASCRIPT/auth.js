@@ -1,4 +1,3 @@
-// -------- LOGIN --------
 document.getElementById("loginForm")?.addEventListener("submit", loginauth);
 
 function loginauth(e) {
