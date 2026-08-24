@@ -1,0 +1,13 @@
+{
+    "ride": [
+        {
+            "name": "Sameer Dhiman",
+            "from": "chandigarh",
+            "to": "Amritsar",
+            "date": "20 AUG 2026",
+            "time": "09:00 AM",
+            "passengers": 2,
+            "price": 499
+        }
+    ]
+}
