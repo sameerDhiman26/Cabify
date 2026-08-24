@@ -1,20 +1,32 @@
 let homePage = document.querySelector(".homepage");
-let findRidePage = document.querySelector(".findRide");
+let tripPage = document.querySelector(".tripPage");
 let sidebar = document.querySelector(".sidebar");
+let findRide = document.querySelector(".findRide");
 
 
 sidebar.addEventListener("click",(e)=>{
     e.preventDefault();
     if(e.target.classList.contains("home-btn")){
-        findRidePage.style.display = "none";
+        tripPage.style.display = "none";
         homePage.style.display = "block";
+        findRide.style.display = "none";
         document.querySelectorAll(".menu-item").forEach((menu)=>{
             menu.classList.remove("active")
         })
          e.target.classList.add("active")
     }
     if(e.target.classList.contains("trip-btn")){
-        findRidePage.style.display = "block";
+        tripPage.style.display = "block";
+        homePage.style.display = "none";
+        findRide.style.display = "none";
+        document.querySelectorAll(".menu-item").forEach((menu)=>{
+            menu.classList.remove("active")
+        })
+        e.target.classList.add("active")
+    }
+    if(e.target.classList.contains("find-btn")){
+        findRide.style.display = "block";
+        tripPage.style.display = "none";
         homePage.style.display = "none";
         document.querySelectorAll(".menu-item").forEach((menu)=>{
             menu.classList.remove("active")
@@ -28,12 +40,8 @@ user = JSON.parse(user);
 let welcomeLine = document.getElementById("welcomeLine")
 welcomeLine.innerHTML = `Welcome Back, ${user.name} 👋`;
 
-let str = "Sameer";
-
-let chr = str.split("")
-
-let userIcon = chr[0];
-
+let str = user.name;
+console.log(str)
+let userIcon = str[0];
 let profileIcon = document.querySelector(".userIcon")
-
-profileIcon.innerHTML = userIcon
+profileIcon.innerHTML = userIcon;
