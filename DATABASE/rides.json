@@ -1,13 +1,14 @@
 {
-    "ride": [
-        {
-            "name": "Sameer Dhiman",
-            "from": "chandigarh",
-            "to": "Amritsar",
-            "date": "20 AUG 2026",
-            "time": "09:00 AM",
-            "passengers": 2,
-            "price": 499
-        }
-    ]
+  "ride": [
+    {
+      "from": "AMRITSAR",
+      "to": "PARWANOO",
+      "passengers": "10",
+      "date": "2026-08-02",
+      "time": "16:16",
+      "price": "10000",
+      "id": "D3wHyOqW7Dk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
