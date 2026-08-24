@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +9,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../CSS/auth.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <script src="../JAVASCRIPT/auth.js" defer></script>
@@ -18,142 +21,226 @@
 
 <body>
 
-  <div class="container">
+  <!-- MAIN CONTENT -->
+  <main class="container">
 
     <!-- LEFT SIDE -->
-    <div class="left-content">
+    <section class="left-content">
 
-      <div class="logo">
+      <!-- LOGO / BRAND -->
+      <header class="logo">
         <i class="fa-solid fa-car-side"></i>
         <span>CabifyPool</span>
-      </div>
+      </header>
 
-      <div class="hero">
-        <h1>Share Rides.<br><span>Save More.</span></h1>
+      <!-- HERO CONTENT -->
+      <section class="hero">
+        <h1>
+          Share Rides.<br>
+          <span>Save More.</span>
+        </h1>
+
         <p class="subtitle">
           Your ride, your way. Connect. Travel. Save together.
         </p>
-      </div>
+      </section>
 
-      <div class="features">
+      <!-- FEATURES -->
+      <section class="features">
 
-        <div class="feature-box">
+        <article class="feature-box">
           <i class="fa-solid fa-users"></i>
           <h3>Trusted</h3>
           <p>Community</p>
-        </div>
+        </article>
 
-        <div class="feature-box">
+        <article class="feature-box">
           <i class="fa-solid fa-shield-halved"></i>
           <h3>Secure</h3>
           <p>Rides</p>
-        </div>
+        </article>
 
-        <div class="feature-box">
+        <article class="feature-box">
           <i class="fa-solid fa-wallet"></i>
           <h3>Save</h3>
           <p>More</p>
-        </div>
+        </article>
 
-      </div>
+      </section>
 
-    </div>
+    </section>
+
 
     <!-- RIGHT SIDE -->
-    <div class="login-card">
+    <section class="login-card">
 
-      <div class="tabs">
-        <button type="button" id="loginTab" class="active" onclick="showLogin()">Login</button>
-        <button type="button" id="signupTab" onclick="showSignup()">Sign Up</button>
-      </div>
+      <!-- LOGIN / SIGNUP NAVIGATION -->
+      <nav class="tabs" aria-label="Authentication navigation">
+
+        <button type="button" id="loginTab" class="active" onclick="showLogin()">
+          Login
+        </button>
+
+        <button type="button" id="signupTab" onclick="showSignup()">
+          Sign Up
+        </button>
+
+      </nav>
+
 
       <!-- LOGIN SECTION -->
-      <div id="loginSection">
+      <section id="loginSection">
 
-        <h2>Welcome Back</h2>
-        <p class="small">Login to continue</p>
+        <header>
+          <h2>Welcome Back</h2>
+          <p class="small">Login to continue</p>
+        </header>
 
         <form id="loginForm">
 
           <div class="input-box">
             <i class="fa-regular fa-envelope"></i>
+
             <input type="email" id="email" placeholder="Enter your email" required>
           </div>
 
+
           <div class="input-box">
             <i class="fa-solid fa-lock"></i>
+
             <input type="password" id="password" placeholder="Enter your password" required>
           </div>
 
+
           <div class="options">
-            <label><input type="checkbox" id="remember"> Remember me</label>
-            <a href="#">Forgot Password?</a>
+
+            <label>
+              <input type="checkbox" id="remember">
+              Remember me
+            </label>
+
+            <a href="#">
+              Forgot Password?
+            </a>
+
           </div>
 
-          <button type="submit" class="login-btn">Login</button>
+
+          <button type="submit" class="login-btn">
+            Login
+          </button>
 
         </form>
 
-        <div class="divider">or continue with</div>
+
+        <div class="divider">
+          or continue with
+        </div>
+
 
         <div class="social-buttons">
-          <button type="button"><i class="fa-brands fa-google"></i></button>
-          <button type="button"><i class="fa-brands fa-apple"></i></button>
-          <button type="button"><i class="fa-brands fa-facebook-f"></i></button>
+
+          <button type="button">
+            <i class="fa-brands fa-google"></i>
+          </button>
+
+          <button type="button">
+            <i class="fa-brands fa-apple"></i>
+          </button>
+
+          <button type="button">
+            <i class="fa-brands fa-facebook-f"></i>
+          </button>
+
         </div>
+
 
         <p class="signup-text">
           Don't have an account?
-          <a href="javascript:void(0)" onclick="showSignup()">Sign Up</a>
+
+          <a href="javascript:void(0)" onclick="showSignup()">
+            Sign Up
+          </a>
         </p>
 
-      </div>
+      </section>
+
 
       <!-- SIGNUP SECTION -->
-      <div id="signupSection" class="hidden">
+      <section id="signupSection" class="hidden">
 
-        <h2>Create Account</h2>
-        <p class="small">Sign up to continue</p>
+        <header>
+          <h2>Create Account</h2>
+          <p class="small">Sign up to continue</p>
+        </header>
 
         <form id="signupForm">
 
           <div class="input-box">
             <i class="fa-regular fa-user"></i>
+
             <input type="text" id="name" placeholder="Enter your name" required>
           </div>
 
+
           <div class="input-box">
             <i class="fa-regular fa-envelope"></i>
+
             <input type="email" id="signupEmail" placeholder="Enter your email" required>
           </div>
 
+
           <div class="input-box">
             <i class="fa-solid fa-lock"></i>
+
             <input type="password" id="signupPassword" placeholder="Create password" required>
           </div>
 
-          <button type="submit" class="login-btn">Sign Up</button>
+
+          <button type="submit" class="login-btn">
+            Sign Up
+          </button>
 
         </form>
 
-        <div class="divider">or continue with</div>
+
+        <div class="divider">
+          or continue with
+        </div>
+
 
         <div class="social-buttons">
-          <button type="button"><i class="fa-brands fa-google"></i></button>
-          <button type="button"><i class="fa-brands fa-apple"></i></button>
-          <button type="button"><i class="fa-brands fa-facebook-f"></i></button>
+
+          <button type="button">
+            <i class="fa-brands fa-google"></i>
+          </button>
+
+          <button type="button">
+            <i class="fa-brands fa-apple"></i>
+          </button>
+
+          <button type="button">
+            <i class="fa-brands fa-facebook-f"></i>
+          </button>
+
         </div>
+
 
         <p class="signup-text">
           Already have an account?
-          <a href="javascript:void(0)" onclick="showLogin()">Login</a>
+
+          <a href="javascript:void(0)" onclick="showLogin()">
+            Login
+          </a>
         </p>
 
-      </div>
+      </section>
 
-    </div>
+    </section>
 
-  </div>
+  </main>
 
 </body>
+
 </html>
+```
