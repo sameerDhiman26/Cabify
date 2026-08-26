@@ -146,7 +146,8 @@ if (publishBtn) {
             passengers: seats,
             date,
             time,
-            price
+            price,
+            status:"active"
         };
 
         try {

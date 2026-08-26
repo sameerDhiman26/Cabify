@@ -95,3 +95,72 @@ body{
     
     
 }
+.rides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trip-card {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.trip-route {
+    margin-bottom: 15px;
+}
+
+.trip-route h3 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.trip-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin-bottom: 15px;
+}
+
+.trip-details p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.trip-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.cancel-btn{
+     padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+.complete-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    
+}
+
+.cancel-btn {
+    background-color: #dc2626;
+}
+
+.cancel-btn:hover {
+    background-color: #b91c1c;
+}
+
+.complete-btn {
+    background-color: #2563eb;
+}
+
+.complete-btn:hover {
+    background-color: #1d4ed8;
+}
