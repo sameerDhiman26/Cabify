@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "server":"npx json-server DATABASE/rides.json --port 3000"
+  },
   "dependencies": {
     "json-server": "^1.0.0-beta.15"
   }
