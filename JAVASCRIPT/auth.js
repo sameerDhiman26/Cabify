@@ -1,4 +1,4 @@
-// -------- LOGIN --------
+//  LOGIN 
 document.getElementById("loginForm")?.addEventListener("submit", loginauth);
 
 function loginauth(e) {
@@ -14,18 +14,20 @@ function loginauth(e) {
         alert("Please sign up first!");
         return;
     }
-
     if (email === savedUser.email && password === savedUser.password) {
+
+        localStorage.setItem("currentUser", JSON.stringify(savedUser));
+
         alert("Login successful");
-        window.location.href="dashboard.html";
-        console.log("Remember:", remember);
+        window.location.href = "dashboard.html";
+
     } else {
         alert("Invalid email or password");
     }
 }
 
 
-// -------- SIGNUP --------
+// SIGNUP 
 document.getElementById("signupForm")?.addEventListener("submit", signupauth);
 
 function signupauth(e) {
@@ -76,10 +78,20 @@ function signupauth(e) {
     localStorage.setItem("USER", JSON.stringify(user));
 
     alert("Signup successful");
-showLogin();
+    showLogin();
 }
 
-// -------- TOGGLE FORMS --------
+//logout
+document.getElementById("logoutBtn")?.addEventListener("click", function () {
+
+    localStorage.removeItem("currentUser");
+    alert("Logout Sucessfully !");
+
+    window.location.href = "login.html";
+});
+
+
+// TOGGLE FORM
 function showLogin() {
     document.getElementById("loginSection").classList.remove("hidden");
     document.getElementById("signupSection").classList.add("hidden");
