@@ -8,7 +8,7 @@
       "time": "16:16",
       "price": "10000",
       "id": "D3wHyOqW7Dk",
-      "status": "active"
+      "status": "completed"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

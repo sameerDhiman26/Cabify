@@ -117,7 +117,7 @@ async function completeTrip(id) {
 }
 
 async function showTrips(status) {
-    let rides = await getTrips();
+   
     
    rides = await  filterTrips(status)
 
