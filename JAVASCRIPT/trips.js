@@ -123,5 +123,13 @@ async function showTrips(status) {
 
     draw_Trips(rides);
 }
+function ride_go(e){
+   e.preventDefault();
+      findRide.style.display = "none";
+        homePage.style.display = "none";
+        tripPage.style.display = "none";
+        offerRide.style.display = "block";
 
+        e.target.classList.add("active");
+}
 showTrips("active");
