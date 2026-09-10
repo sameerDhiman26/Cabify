@@ -87,7 +87,7 @@ document.getElementById("logoutBtn")?.addEventListener("click", function () {
     localStorage.removeItem("currentUser");
     alert("Logout Sucessfully !");
 
-    window.location.href = "login.html";
+    window.location.href = "auth.html";
 });
 
 
