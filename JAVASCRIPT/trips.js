@@ -117,11 +117,19 @@ async function completeTrip(id) {
 }
 
 async function showTrips(status) {
-    let rides = await getTrips();
+   
     
    rides = await  filterTrips(status)
 
     draw_Trips(rides);
 }
+function ride_go(e){
+   e.preventDefault();
+      findRide.style.display = "none";
+        homePage.style.display = "none";
+        tripPage.style.display = "none";
+        offerRide.style.display = "block";
 
+        e.target.classList.add("active");
+}
 showTrips("active");
