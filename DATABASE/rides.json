@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "name": "Gagandeep Singh",
+      "email": "gagan@gmail.com",
+      "password": "Gagan@1322",
+      "id": "NctP4KoYivI"
+    }
+  ],
   "ride": [
     {
       "from": "AMRITSAR",
