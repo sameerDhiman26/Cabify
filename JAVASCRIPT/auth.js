@@ -1,3 +1,4 @@
+// LOGIN
 
 document.getElementById("loginForm")?.addEventListener("submit", loginauth);
 
@@ -6,28 +7,38 @@ function loginauth(e) {
 
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
-    let remember = document.getElementById("remember").checked;
 
-    let savedUser = JSON.parse(localStorage.getItem("USER"));
+    fetch("http://localhost:3000/users")
+        .then(response => response.json())
+        .then(users => {
 
-    if (savedUser == null) {
-        alert("Please sign up first!");
-        return;
-    }
-    if (email === savedUser.email && password === savedUser.password) {
+            let user = users.find(
+                user => user.email === email && user.password === password
+            );
 
-        localStorage.setItem("currentUser", JSON.stringify(savedUser));
+            if (user) {
 
-        alert("Login successful");
-        window.location.href = "dashboard.html";
+                localStorage.setItem(
+                    "currentUser",
+                    JSON.stringify(user)
+                );
 
-    } else {
-        alert("Invalid email or password");
-    }
+                alert("Login successful");
+                window.location.href = "dashboard.html";
+
+            } else {
+                alert("Invalid email or password");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Server error");
+        });
 }
 
 
-// SIGNUP 
+// SIGNUP
+
 document.getElementById("signupForm")?.addEventListener("submit", signupauth);
 
 function signupauth(e) {
@@ -37,21 +48,33 @@ function signupauth(e) {
     let email = document.getElementById("signupEmail").value.trim();
     let password = document.getElementById("signupPassword").value;
 
-    // Regex validation
+    // REGEX
+
     let nameRegex = /^[A-Za-z ]{2,30}$/;
+
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     let passwordRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+
+    // NAME VALIDATION
 
     if (!nameRegex.test(name)) {
         alert("Name should contain only letters and spaces (2-30 characters).");
         return;
     }
 
+
+    // EMAIL VALIDATION
+
     if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
         return;
     }
+
+
+    // PASSWORD VALIDATION
 
     if (!passwordRegex.test(password)) {
         alert(
@@ -60,50 +83,110 @@ function signupauth(e) {
         return;
     }
 
-    // Check existing user
-    let existingUser = JSON.parse(localStorage.getItem("USER"));
 
-    if (existingUser && existingUser.email === email) {
-        alert("User already exists. Please log in.");
-        return;
-    }
+    // CHECK EXISTING USER
 
-    // Save user
-    let user = {
-        name: name,
-        email: email,
-        password: password
-    };
+    fetch("http://localhost:3000/users")
+        .then(response => response.json())
+        .then(users => {
 
-    localStorage.setItem("USER", JSON.stringify(user));
+            let existingUser = users.find(
+                user => user.email === email
+            );
 
-    alert("Signup successful");
-    showLogin();
+            if (existingUser) {
+                alert("User already exists. Please log in.");
+                return;
+            }
+
+
+            // CREATE USER
+
+            let user = {
+                name: name,
+                email: email,
+                password: password
+            };
+
+
+            // POST USER
+
+            fetch("http://localhost:3000/users", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                console.log(data);
+
+                alert("Signup successful");
+
+                showLogin();
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Signup failed");
+            });
+
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Server error");
+        });
 }
 
-//logout
+
+// LOGOUT
+
 document.getElementById("logoutBtn")?.addEventListener("click", function () {
 
     localStorage.removeItem("currentUser");
-    alert("Logout Sucessfully !");
+
+    alert("Logout Successfully!");
 
     window.location.href = "auth.html";
 });
 
 
-// TOGGLE FORM
-function showLogin() {
-    document.getElementById("loginSection").classList.remove("hidden");
-    document.getElementById("signupSection").classList.add("hidden");
+// TOGGLE LOGIN
 
-    document.getElementById("loginTab").classList.add("active");
-    document.getElementById("signupTab").classList.remove("active");
+function showLogin() {
+
+    document.getElementById("loginSection")
+        .classList.remove("hidden");
+
+    document.getElementById("signupSection")
+        .classList.add("hidden");
+
+
+    document.getElementById("loginTab")
+        .classList.add("active");
+
+    document.getElementById("signupTab")
+        .classList.remove("active");
 }
 
-function showSignup() {
-    document.getElementById("signupSection").classList.remove("hidden");
-    document.getElementById("loginSection").classList.add("hidden");
 
-    document.getElementById("signupTab").classList.add("active");
-    document.getElementById("loginTab").classList.remove("active");
+// TOGGLE SIGNUP
+
+function showSignup() {
+
+    document.getElementById("signupSection")
+        .classList.remove("hidden");
+
+    document.getElementById("loginSection")
+        .classList.add("hidden");
+
+
+    document.getElementById("signupTab")
+        .classList.add("active");
+
+    document.getElementById("loginTab")
+        .classList.remove("active");
 }
