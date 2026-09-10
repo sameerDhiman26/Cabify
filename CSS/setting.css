@@ -1,0 +1,247 @@
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.settingsPage {
+    display: none;
+    width: 750px;
+    max-width: 95%;
+    margin: 40px auto;
+}
+
+.settings-header {
+    margin-bottom: 25px;
+}
+
+.settings-header h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.settings-header p {
+    color: #94A3B8;
+    font-size: 15px;
+}
+
+
+/* Settings Card */
+
+.settings-card {
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+
+/* Card Heading */
+
+.settings-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #334155;
+}
+
+.settings-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(37, 99, 235, 0.15);
+    color: #2563EB;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.settings-title h2 {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.settings-title p {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+
+/* Theme */
+
+.theme-setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-setting h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.theme-setting p {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+
+/* Toggle Switch */
+
+.theme-switch {
+    position: relative;
+    width: 64px;
+    height: 34px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 3px;
+
+    background: #2563EB;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.theme-switch input:checked + .slider::before {
+    transform: translateX(30px);
+}
+
+.slider i {
+    font-size: 12px;
+    z-index: 1;
+    color: white;
+}
+
+
+/* Password Inputs */
+
+.setting-input {
+    margin-bottom: 18px;
+}
+
+.setting-input label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #CBD5E1;
+    font-size: 14px;
+}
+
+.setting-input input {
+    width: 100%;
+    height: 55px;
+
+    padding: 0 18px;
+
+    background: #111827;
+    color: white;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.setting-input input::placeholder {
+    color: #64748B;
+}
+
+.setting-input input:focus {
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Change Password Button */
+
+.change-password-btn {
+    background: #2563EB;
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 14px 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.change-password-btn:hover {
+    background: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+.change-password-btn:active {
+    transform: translateY(0);
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .settingsPage {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .settings-card {
+        padding: 22px;
+    }
+
+    .settings-header h1 {
+        font-size: 28px;
+    }
+
+    .theme-setting {
+        gap: 20px;
+    }
+}

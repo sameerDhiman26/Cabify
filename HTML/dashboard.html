@@ -1,362 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabify Dashboard</title>
 
     <link rel="stylesheet" href="../CSS/dashboard.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/setting.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="../CSS/rides.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/findRide.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
-<div class="dashboard">
+    <div class="dashboard">
 
-    <!-- Sidebar -->
+        <!-- Sidebar -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
-            <i class="fa-solid fa-car"></i>
-            <h2>Cabify</h2>
-        </div>
-
-        <ul>
-
-            <li class="active menu-item home-btn"><i class="fa-solid fa-house "></i> Home</li>
-
-            <li class="find-btn menu-item"><i class="fa-solid fa-location-dot "></i> Find Ride</li>
-
-            <li class="menu-item offer-btn"><i class="fa-solid fa-car-side "></i> Offer Ride</li>
-
-            <li class="menu-item trip-btn"><i class="fa-solid fa-road"></i> My Trips</li>
-
-            <li class="message-btn menu-item"><i class="fa-solid fa-message"></i> Messages</li>
-
-            <li><i class="fa-solid fa-wallet" ></i> Wallet</li>
-
-            <li><i class="fa-solid fa-gear"></i> Settings</li>
-
-            <li id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
-
-        </ul>
-
-    </aside>
-
-
-    <!-- Main -->
-
-    <main class="main-content">
-
-        <!-- Navbar -->
-         <div class="homepage">
-
-        <div class="topbar">
-
-            <div class="search">
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-                <input type="text" placeholder="Search destination">
-
-            </div>
-
-            <div class="profile">
-
-                <i class="fa-regular fa-bell"></i>
-
-                <div class="userIcon"></div>
-
-            </div>
-
-        </div>
-
-        <!-- Hero -->
-
-        <section class="hero">
-
-            <div>
-
-                <h1 id="welcomeLine">Welcome Back, User 👋</h1>
-
-                <p>
-                    Ready for your next ride? Find affordable rides or
-                    offer your own in seconds.
-                </p>
-
-                <button>Find Ride</button>
-
-            </div>
-
-        </section>
-
-        <!-- Stats -->
-
-        <section class="stats">
-
-            <div class="card">
-
-                <i class="fa-solid fa-route"></i>
-
-                <h2>12</h2>
-
-                <p>Trips Completed</p>
-
-            </div>
-
-            <div class="card">
-
-                <i class="fa-solid fa-wallet"></i>
-
-                <h2>₹4,580</h2>
-
-                <p>Total Savings</p>
-
-            </div>
-
-            <div class="card">
-
-                <i class="fa-solid fa-star"></i>
-
-                <h2>4.9</h2>
-
-                <p>Your Rating</p>
-
-            </div>
-
-        </section>
-
-        <!-- Quick Actions -->
-
-        <section class="actions">
-
-            <div class="action">
-
+            <div class="logo">
                 <i class="fa-solid fa-car"></i>
-
-                <h3>Offer Ride</h3>
-
+                <h2>Cabify</h2>
             </div>
 
-            <div class="action">
+            <ul>
 
-                <i class="fa-solid fa-location-arrow"></i>
+                <li class="active menu-item home-btn"><i class="fa-solid fa-house "></i> Home</li>
 
-                <h3>Book Ride</h3>
+                <li class="find-btn menu-item"><i class="fa-solid fa-location-dot "></i> Find Ride</li>
 
+                <li class="menu-item offer-btn"><i class="fa-solid fa-car-side "></i> Offer Ride</li>
+
+                <li class="menu-item trip-btn"><i class="fa-solid fa-road"></i> My Trips</li>
+
+                <li class="message-btn menu-item"><i class="fa-solid fa-message"></i> Messages</li>
+
+                <li><i class="fa-solid fa-wallet"></i> Wallet</li>
+
+                <li class="settings-btn menu-item"><i class="fa-solid fa-gear"></i> Settings</li>
+
+                <li id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- Main -->
+
+        <main class="main-content">
+
+            <!-- Navbar -->
+            <div class="homepage">
+
+                <div class="topbar">
+
+                    <div class="search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search destination">
+
+                    </div>
+
+                    <div class="profile">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <div class="userIcon"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- Hero -->
+
+                <section class="hero">
+
+                    <div>
+
+                        <h1 id="welcomeLine">Welcome Back, User 👋</h1>
+
+                        <p>
+                            Ready for your next ride? Find affordable rides or
+                            offer your own in seconds.
+                        </p>
+
+                        <button>Find Ride</button>
+
+                    </div>
+
+                </section>
+
+                <!-- Stats -->
+
+                <section class="stats">
+
+                    <div class="card">
+
+                        <i class="fa-solid fa-route"></i>
+
+                        <h2>12</h2>
+
+                        <p>Trips Completed</p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <h2>₹4,580</h2>
+
+                        <p>Total Savings</p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <h2>4.9</h2>
+
+                        <p>Your Rating</p>
+
+                    </div>
+
+                </section>
+
+                <!-- Quick Actions -->
+
+                <section class="actions">
+
+                    <div class="action">
+
+                        <i class="fa-solid fa-car"></i>
+
+                        <h3>Offer Ride</h3>
+
+                    </div>
+
+                    <div class="action">
+
+                        <i class="fa-solid fa-location-arrow"></i>
+
+                        <h3>Book Ride</h3>
+
+                    </div>
+
+                    <div class="action">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <h3>My Carpools</h3>
+
+                    </div>
+
+                </section>
+
+                <!-- Recent Rides -->
+
+                <section class="rides">
+
+                    <h2>Recent Rides</h2>
+
+                    <table>
+
+                        <tr>
+
+                            <th>From</th>
+
+                            <th>To</th>
+
+                            <th>Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Delhi</td>
+
+                            <td>Chandigarh</td>
+
+                            <td>22 Aug</td>
+
+                            <td><span class="completed">Completed</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Mohali</td>
+
+                            <td>Patiala</td>
+
+                            <td>25 Aug</td>
+
+                            <td><span class="upcoming">Upcoming</span></td>
+
+                        </tr>
+
+                    </table>
+
+                </section>
             </div>
 
-            <div class="action">
+            <!-- my trips page -->
+            <div class="tripPage">
+                <section class="top-main">
+                    <div class="top-header">
+                        <h2>Rides Given</h2>
+                        <p>Trips you have published and their booked passengers</p>
+                    </div>
+                    <a href="" class="offer-link" onclick="ride_go(event)">Offer new Ride</a>
+                </section>
 
-                <i class="fa-solid fa-users"></i>
-
-                <h3>My Carpools</h3>
-
+                <section class="filter-section">
+                    <button class="filter-btn active" data-status="active">Active Rides</button>
+                    <button class="filter-btn" data-status="completed">Completed</button>
+                    <button class="filter-btn" data-status="cancelled">Cancelled</button>
+                </section>
+                <section class="booking-box">
+                    <section id="ridesList" class="empty-box">
+                        <p>No rides offered yet</p>
+                    </section>
+                </section>
             </div>
 
-        </section>
 
-        <!-- Recent Rides -->
-
-        <section class="rides">
-
-            <h2>Recent Rides</h2>
-
-            <table>
-
-                <tr>
-
-                    <th>From</th>
-
-                    <th>To</th>
-
-                    <th>Date</th>
-
-                    <th>Status</th>
-
-                </tr>
-
-                <tr>
-
-                    <td>Delhi</td>
-
-                    <td>Chandigarh</td>
-
-                    <td>22 Aug</td>
-
-                    <td><span class="completed">Completed</span></td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Mohali</td>
-
-                    <td>Patiala</td>
-
-                    <td>25 Aug</td>
-
-                    <td><span class="upcoming">Upcoming</span></td>
-
-                </tr>
-
-            </table>
-
-        </section>
-        </div>
-
-        <!-- my trips page -->
-        <div class="tripPage"> 
-            <section class="top-main">
-        <div class="top-header">
-          <h2>Rides Given</h2>
-          <p>Trips you have published and their booked passengers</p>
-        </div>
-        <a href="" class="offer-link" onclick="ride_go(event)">Offer new Ride</a>
-      </section>
-
-     <section class="filter-section">
-  <button class="filter-btn active" data-status="active">Active Rides</button>
-  <button class="filter-btn" data-status="completed">Completed</button>
-  <button class="filter-btn" data-status="cancelled">Cancelled</button>
-</section>
-      <section class="booking-box">
-        <section id="ridesList" class="empty-box">
-          <p>No rides offered yet</p>
-        </section>
-      </section>
-        </div>
-
-
-        <!-- find ride page -->
-         <div class="findRide">
-            <!-- <div class="findRide-form-container">
+            <!-- find ride page -->
+            <div class="findRide">
+                <!-- <div class="findRide-form-container">
                 
             </div> -->
-           <div class="quote-container">
-            <div class="quote-content">
-            <h1>Find a ride that <br>
-                <span class="glow">Fits your journey.</span>
-            </h1>
+                <div class="quote-container">
+                    <div class="quote-content">
+                        <h1>Find a ride that <br>
+                            <span class="glow">Fits your journey.</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <div class="heading">
+                        <p>Search Rides</p>
+                        <span>Where do you want to go?</sapn>
+                    </div>
+                    <div class="main-form">
+
+                        <div class="main-input-box">
+                            <label for="from" class="label-text">From</label>
+                            <div class="input-box">
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <input type="text" id="from" placeholder="Enter starting place">
+                            </div>
+                        </div>
+
+                        <div class="main-input-box">
+                            <label for="to" class="label-text">To</label>
+                            <div class="input-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" id="to" placeholder="Enter Destination">
+                            </div>
+                        </div>
+
+                        <div class="main-input-box">
+                            <label for="date" class="label-text">Date</label>
+                            <div class="input-box">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="date" id="date">
+                            </div>
+                        </div>
+
+                        <div class="main-input-box">
+                            <label for="time" class="label-text">Time</label>
+                            <div class="input-box">
+                                <i class="fa-regular fa-clock"></i>
+                                <input type="time" id="time" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="main-input-box">
+                            <label for="to" class="label-text">Passengers</label>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user-group"></i>
+                                <select class="passenger-select">
+                                    <option value="1">1 passenger</option>
+                                    <option value="2">2 passengers</option>
+                                    <option value="3">3 passengers</option>
+                                    <option value="4">4 passengers</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Find Rides
+                        </button>
+
+
+                    </div>
+                </div>
+
+                <div class="other-rides-container">
+                    <h2>Other rides you may like.</h2>
+                    <div id="card-container">
+
+                    </div>
+                </div>
+
+
+
             </div>
-           </div>
 
-           <div class="form-container">
-                <div class="heading">
-                    <p>Search Rides</p>
-                    <span>Where do you want to go?</sapn>
-                </div>
-                <div class="main-form">
+            <!-- //offerride -->
 
-                    <div class="main-input-box">
-                        <label for="from" class="label-text">From</label>
+            <div class="offerRide">
+                <h1>Offer Ride</h1>
+                <form>
+                    <!-- From and To -->
+                    <input class="from" type="text" placeholder="From (City)">
+                    <input class="to" type="text" placeholder="To (City)">
+                    <!-- Date -->
+                    <div class="row">
                         <div class="input-box">
-                        <i class="fa-solid fa-circle-dot"></i>
-                        <input type="text" id="from" placeholder="Enter starting place">
+                            <input class="date" type="date">
+                        </div>
+                        <!-- Time -->
+                        <div class="input-box">
+                            <input class="time" type="time">
                         </div>
                     </div>
-
-                    <div class="main-input-box">
-                        <label for="to" class="label-text">To</label>
-                        <div class="input-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input type="text" id="to" placeholder="Enter Destination">
-                        </div>
+                    <div class="row">
+                        <!-- Seats -->
+                        <input class="seats" type="number" placeholder="Seats" min="1">
+                        <!-- Price -->
+                        <input class="price" type="number" placeholder="₹ Price" min="0">
                     </div>
+                    <!-- Button -->
+                    <button class="publish-btn">Publish Ride</button>
 
-                    <div class="main-input-box">
-                        <label for="date" class="label-text">Date</label>
-                        <div class="input-box">
-                        <i class="fa-regular fa-calendar"></i>
-                        <input type="date" id="date">
-                        </div>
-                    </div>
-
-                    <div class="main-input-box">
-                        <label for="time" class="label-text">Time</label>
-                        <div class="input-box">
-                        <i class="fa-regular fa-clock"></i>
-                        <input type="time" id="time" placeholder="">
-                        </div>
-                    </div>
-
-                    <div class="main-input-box">
-                        <label for="to" class="label-text">Passengers</label>
-                        <div class="input-box">
-                        <i class="fa-solid fa-user-group"></i>
-                        <select class="passenger-select">
-                            <option value="1">1 passenger</option>
-                            <option value="2">2 passengers</option>
-                            <option value="3">3 passengers</option>
-                            <option value="4">4 passengers</option>
-                        </select>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="search-button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    Find Rides
-                </button>
-
-
-                </div>
-           </div>
-
-           <div class="other-rides-container">
-            <h2>Other rides you may like.</h2>
-            <div id="card-container">
-                
+                </form>
             </div>
-           </div>
 
-        
+            <div class="settingsPage">
 
-         </div>
-         
-<!-- //offerride -->
-
-        <div class="offerRide">
-            <h1>Offer Ride</h1>
-            <form>
-                <!-- From and To -->
-                <input class="from" type="text" placeholder="From (City)">
-                <input class="to" type="text" placeholder="To (City)">
-                 <!-- Date -->
-                <div class="row">
-                    <div class="input-box">
-                    <input class="date" type="date">
-                </div>
-                 <!-- Time -->
-                <div class="input-box">
-                    <input class="time" type="time">
+                <div class="settings-header">
+                    <h1>Settings</h1>
+                    <p>Manage your account preferences and security.</p>
                 </div>
 
-                <div class="row">
-                    <!-- Seats -->
-                <input class="seats" type="number" placeholder="Seats" min="1">
-                    <!-- Price -->
-                <input class= "price" type="number" placeholder="₹ Price" min="0">
+                <div class="settings-card">
+                    <div class="settings-title">
+                        <div class="settings-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+
+                        <div>
+                            <h2>Appearance</h2>
+                            <p>Choose how Cabify looks for you.</p>
+                        </div>
+                    </div>
+
+                    <div class="theme-setting">
+                        <div>
+                            <h3>Theme</h3>
+                            <p>Switch between dark and light mode.</p>
+                        </div>
+
+                        <label class="theme-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider">
+                                <i class="fa-solid fa-moon"></i>
+                                <i class="fa-solid fa-sun"></i>
+                            </span>
+                        </label>
+                    </div>
                 </div>
-                <!-- Button -->
-                 <button class="publish-btn">Publish Ride</button>
 
-            </form>
-        </div>
 
-    </main>
+                <div class="settings-card">
+                    <div class="settings-title">
+                        <div class="settings-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
 
-</div>
+                        <div>
+                            <h2>Security</h2>
+                            <p>Change your account password.</p>
+                        </div>
+                    </div>
 
-    </main>
+                    <form id="passwordForm">
 
-</div>
-<script src="../JAVASCRIPT/dashbooard.js"></script>
-<script src="../JAVASCRIPT/rides.js"></script>
-<script src="../JAVASCRIPT/trips.js"></script>
-<script src="../JAVASCRIPT/auth.js"></script>
+                        <div class="setting-input">
+                            <label>Current Password</label>
+                            <input type="password" id="currentPassword" placeholder="Enter current password">
+                        </div>
+
+                        <div class="setting-input">
+                            <label>New Password</label>
+                            <input type="password" id="newPassword" placeholder="Enter new password">
+                        </div>
+
+                        <div class="setting-input">
+                            <label>Confirm New Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                        </div>
+
+                        <button id="setting-form-btn" type="submit" class="change-password-btn">
+                            Change Password
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+    <script src="../JAVASCRIPT/dashbooard.js"></script>
+    <script src="../JAVASCRIPT/rides.js"></script>
+    <script src="../JAVASCRIPT/trips.js"></script>
+    <script src="../JAVASCRIPT/auth.js"></script>
+    <script src="../JAVASCRIPT/setting.js" defer></script>
 </body>
+
 </html>
