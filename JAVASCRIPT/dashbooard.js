@@ -77,16 +77,16 @@ sidebar.addEventListener("click", (e) => {
 // USER
 // ==========================================
 
-let user = localStorage.getItem("USER");
+let user = localStorage.getItem("currentUser");
 if (user) {
     user = JSON.parse(user);
 
     // Welcome message
     let welcomeLine = document.getElementById("welcomeLine");
-    welcomeLine.innerHTML = `Welcome Back, ${user.name} `;
+    welcomeLine.innerHTML = `Welcome Back, ${user.username} `;
 
     // Profile icon
-    let str = user.name;
+    let str = user.username;
     console.log(str);
     let userIcon = str[0].toUpperCase();
     let profileIcon = document.querySelector(".userIcon");
