@@ -1,6 +1,3 @@
-/* =========================
-   SETTINGS PAGE
-========================= */
 
 .settingsPage {
     display: none;
@@ -24,8 +21,6 @@
 }
 
 
-/* Settings Card */
-
 .settings-card {
     background: #1E293B;
     border: 1px solid #334155;
@@ -35,7 +30,7 @@
 }
 
 
-/* Card Heading */
+
 
 .settings-title {
     display: flex;
@@ -75,7 +70,7 @@
 }
 
 
-/* Theme */
+
 
 .theme-setting {
     display: flex;
@@ -94,7 +89,7 @@
 }
 
 
-/* Toggle Switch */
+
 
 .theme-switch {
     position: relative;
@@ -108,14 +103,14 @@
 
 .slider {
     position: absolute;
-    inset: 0;
+    
 
     background: #111827;
 
     border: 1px solid #334155;
     border-radius: 30px;
 
-    cursor: pointer;
+   
 
     display: flex;
     align-items: center;
@@ -123,7 +118,7 @@
 }
 
 .slider::before {
-    content: "";
+    
 
     position: absolute;
 
@@ -136,12 +131,10 @@
 
     border-radius: 50%;
 
-    transition: 0.3s;
+   
 }
 
-.theme-switch input:checked + .slider::before {
-    transform: translateX(30px);
-}
+
 
 .slider i {
     font-size: 12px;
@@ -150,7 +143,7 @@
 }
 
 
-/* Password Inputs */
+
 
 .setting-input {
     margin-bottom: 18px;
@@ -176,11 +169,8 @@
     border: 1px solid #334155;
     border-radius: 12px;
 
-    outline: none;
+  
 
-    font-size: 15px;
-
-    transition: 0.2s;
 }
 
 .setting-input input::placeholder {
@@ -190,12 +180,10 @@
 .setting-input input:focus {
     border-color: #2563EB;
 
-    box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.12);
+   
 }
 
 
-/* Change Password Button */
 
 .change-password-btn {
     background: #2563EB;
@@ -206,42 +194,14 @@
 
     padding: 14px 25px;
 
-    font-size: 15px;
-    font-weight: 600;
 
-    cursor: pointer;
-
-    transition: 0.25s;
 }
 
 .change-password-btn:hover {
     background: #1D4ED8;
-    transform: translateY(-2px);
-}
-
-.change-password-btn:active {
-    transform: translateY(0);
+   
 }
 
 
-/* Responsive */
 
-@media (max-width: 700px) {
 
-    .settingsPage {
-        width: 95%;
-        margin: 25px auto;
-    }
-
-    .settings-card {
-        padding: 22px;
-    }
-
-    .settings-header h1 {
-        font-size: 28px;
-    }
-
-    .theme-setting {
-        gap: 20px;
-    }
-}

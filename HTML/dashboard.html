@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../CSS/dashboard.css">
     <link rel="stylesheet" href="../CSS/setting.css">
+    <link rel="stylesheet" href="../CSS/message.css">
+     <link rel="stylesheet" href="../CSS/wallet.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="../CSS/rides.css" rel="stylesheet">
@@ -40,7 +42,7 @@
 
                 <li class="message-btn menu-item"><i class="fa-solid fa-message"></i> Messages</li>
 
-                <li><i class="fa-solid fa-wallet"></i> Wallet</li>
+               <li class="wallet-btn menu-item"><i class="fa-solid fa-wallet"></i>Wallet</li>
 
                 <li class="settings-btn menu-item"><i class="fa-solid fa-gear"></i> Settings</li>
 
@@ -350,6 +352,200 @@
                 </form>
             </div>
 
+            <div class="messagePage">
+
+    <div class="message-header">
+        <h1>Messages</h1>
+        <p>Chat with riders and drivers.</p>
+    </div>
+
+    <div class="message-container">
+
+        <!-- LEFT SIDE -->
+        <div class="conversation-list">
+
+            <div class="conversation active-chat">
+                <div class="avatar">R</div>
+
+                <div class="conversation-info">
+                    <h3>Rahul Sharma</h3>
+                    <p>Are you still coming?</p>
+                </div>
+
+                <span>8:30 PM</span>
+            </div>
+
+            <div class="conversation">
+                <div class="avatar">A</div>
+
+                <div class="conversation-info">
+                    <h3>Ankit</h3>
+                    <p>Thanks for the ride!</p>
+                </div>
+
+                <span>Yesterday</span>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="chat-section">
+
+            <div class="chat-header">
+
+                <div class="avatar">R</div>
+
+                <div>
+                    <h3>Rahul Sharma</h3>
+                    <p>Chandigarh → Delhi</p>
+                </div>
+
+            </div>
+
+
+            <div class="chat-messages" id="chatMessages">
+
+                <div class="message received">
+                    Hi, are you still coming at 8?
+                </div>
+
+                <div class="message sent">
+                    Yes, I'll reach shortly.
+                </div>
+
+                <div class="message received">
+                    Okay, thanks 👍
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                >
+
+                <button id="sendMessageBtn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    
+        <div class="walletPage">
+
+    <div class="wallet-header">
+        <h1>Wallet</h1>
+        <p>Manage your demo balance and ride transactions.</p>
+    </div>
+
+
+    <div class="wallet-balance-card">
+
+        <div>
+            <p>Available Balance</p>
+            <h1>₹2,450</h1>
+        </div>
+
+        <div class="wallet-big-icon">
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+
+    </div>
+
+
+    <div class="wallet-actions">
+
+        <button>
+            <i class="fa-solid fa-plus"></i>
+            <span>Add Money</span>
+        </button>
+
+        <button>
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Money</span>
+        </button>
+
+        <button>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>History</span>
+        </button>
+
+    </div>
+
+
+    <div class="transaction-box">
+
+        <h2>Recent Transactions</h2>
+
+
+        <div class="transaction">
+
+            <div class="transaction-icon">
+                <i class="fa-solid fa-car"></i>
+            </div>
+
+            <div class="transaction-info">
+                <h3>Chandigarh → Delhi</h3>
+                <p>Ride Payment · 12 Sep 2026</p>
+            </div>
+
+            <span class="expense">
+                - ₹450
+            </span>
+
+        </div>
+
+
+        <div class="transaction">
+
+            <div class="transaction-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div class="transaction-info">
+                <h3>Wallet Recharge</h3>
+                <p>Added money · 10 Sep 2026</p>
+            </div>
+
+            <span class="income">
+                + ₹1,000
+            </span>
+
+        </div>
+
+
+        <div class="transaction">
+
+            <div class="transaction-icon">
+                <i class="fa-solid fa-car"></i>
+            </div>
+
+            <div class="transaction-info">
+                <h3>Mohali → Patiala</h3>
+                <p>Ride Payment · 8 Sep 2026</p>
+            </div>
+
+            <span class="expense">
+                - ₹320
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
             <div class="settingsPage">
 
                 <div class="settings-header">
@@ -357,33 +553,9 @@
                     <p>Manage your account preferences and security.</p>
                 </div>
 
-                <div class="settings-card">
-                    <div class="settings-title">
-                        <div class="settings-icon">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
+               
 
-                        <div>
-                            <h2>Appearance</h2>
-                            <p>Choose how Cabify looks for you.</p>
-                        </div>
-                    </div>
-
-                    <div class="theme-setting">
-                        <div>
-                            <h3>Theme</h3>
-                            <p>Switch between dark and light mode.</p>
-                        </div>
-
-                        <label class="theme-switch">
-                            <input type="checkbox" id="themeToggle">
-                            <span class="slider">
-                                <i class="fa-solid fa-moon"></i>
-                                <i class="fa-solid fa-sun"></i>
-                            </span>
-                        </label>
-                    </div>
-                </div>
+                  
 
 
                 <div class="settings-card">
@@ -434,6 +606,7 @@
     <script src="../JAVASCRIPT/trips.js"></script>
     <script src="../JAVASCRIPT/auth.js"></script>
     <script src="../JAVASCRIPT/setting.js" defer></script>
+    <script src="../JAVASCRIPT/message.js"></script>
 </body>
 
 </html>

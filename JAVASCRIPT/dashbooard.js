@@ -8,7 +8,8 @@ let sidebar = document.querySelector(".sidebar");
 let findRide = document.querySelector(".findRide");
 let offerRide = document.querySelector(".offerRide");
 let settingsPage = document.querySelector(".settingsPage");
-
+let messagePage = document.querySelector(".messagePage");
+let walletPage = document.querySelector(".walletPage");
 // ==========================================
 // SIDEBAR NAVIGATION
 // ==========================================
@@ -29,6 +30,8 @@ sidebar.addEventListener("click", (e) => {
     offerRide.style.display = "none";
     findRide.style.display = "none";
     settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -39,6 +42,8 @@ sidebar.addEventListener("click", (e) => {
     findRide.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -49,6 +54,8 @@ sidebar.addEventListener("click", (e) => {
     homePage.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -59,6 +66,8 @@ sidebar.addEventListener("click", (e) => {
     tripPage.style.display = "none";
     offerRide.style.display = "block";
     settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
     e.target.classList.add("active");
   }
  
@@ -68,8 +77,36 @@ sidebar.addEventListener("click", (e) => {
     findRide.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "block";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
     e.target.classList.add("active");
   }
+  if (e.target.classList.contains("message-btn")) {
+
+  homePage.style.display = "none";
+  tripPage.style.display = "none";
+  findRide.style.display = "none";
+  offerRide.style.display = "none";
+  settingsPage.style.display = "none";
+  walletPage.style.display = "none";
+
+  messagePage.style.display = "block";
+
+  e.target.classList.add("active");
+}
+if (e.target.classList.contains("wallet-btn")) {
+
+  homePage.style.display = "none";
+  tripPage.style.display = "none";
+  findRide.style.display = "none";
+  offerRide.style.display = "none";
+  settingsPage.style.display = "none";
+  messagePage.style.display = "none";
+
+  walletPage.style.display = "block";
+
+  e.target.classList.add("active");
+}
 });
 
 // ==========================================
