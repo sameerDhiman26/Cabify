@@ -83,10 +83,10 @@ if (user) {
 
     // Welcome message
     let welcomeLine = document.getElementById("welcomeLine");
-    welcomeLine.innerHTML = `Welcome Back, ${user.username} `;
+    welcomeLine.innerHTML = `Welcome Back, ${user.name} `;
 
     // Profile icon
-    let str = user.username;
+    let str = user.name;
     console.log(str);
     let userIcon = str[0].toUpperCase();
     let profileIcon = document.querySelector(".userIcon");
