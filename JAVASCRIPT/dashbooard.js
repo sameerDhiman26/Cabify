@@ -93,7 +93,7 @@ walletPage.style.display = "none";
   messagePage.style.display = "block";
 
   e.target.classList.add("active");
-  alert("page is static , in work for future")
+  
 }
 if (e.target.classList.contains("wallet-btn")) {
 
@@ -107,7 +107,7 @@ if (e.target.classList.contains("wallet-btn")) {
   walletPage.style.display = "block";
 
   e.target.classList.add("active");
-  alert("page is static , in work for future")
+ 
 }
 });
 
