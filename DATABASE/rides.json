@@ -8,17 +8,7 @@
     }
   ],
   "ride": [
-    {
-      "name": "sameer",
-      "from": "nalagarh",
-      "to": "pinjore",
-      "passengers": "4",
-      "date": "2026-09-22",
-      "time": "02:00",
-      "price": "1200",
-      "status": "active",
-      "id": "75FVSetwV1c"
-    }
+    
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

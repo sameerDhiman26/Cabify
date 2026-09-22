@@ -87,6 +87,7 @@ async function filterTrips(status) {
 }
 
 async function cancelTrip(id) {
+    
     let res = await fetch(`http://localhost:3000/ride/${id}`,{
         "method":"PATCH",
        headers: {
