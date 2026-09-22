@@ -1,22 +1,23 @@
 {
   "users": [
     {
-      "name": "Gagandeep Singh",
-      "email": "gagan@gmail.com",
-      "password": "12",
-      "id": "NctP4KoYivI"
+      "name": "sameer",
+      "email": "sameer@gmail.com",
+      "password": "Sameer@44",
+      "id": "2VXdqKtdBcI"
     }
   ],
   "ride": [
     {
-      "from": "AMRITSAR",
-      "to": "PARWANOO",
-      "passengers": "10",
-      "date": "2026-08-02",
-      "time": "16:16",
-      "price": "10000",
-      "id": "D3wHyOqW7Dk",
-      "status": "completed"
+      "name": "sameer",
+      "from": "nalagarh",
+      "to": "pinjore",
+      "passengers": "4",
+      "date": "2026-09-22",
+      "time": "02:00",
+      "price": "1200",
+      "status": "active",
+      "id": "75FVSetwV1c"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
