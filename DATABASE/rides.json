@@ -5,6 +5,12 @@
       "email": "sameer@gmail.com",
       "password": "Sameer@44",
       "id": "2VXdqKtdBcI"
+    },
+    {
+      "name": "gagan",
+      "email": "gagan@gmail.com",
+      "password": "Gagan1234@",
+      "id": "2SCcpFaScOI"
     }
   ],
   "ride": [
@@ -16,8 +22,41 @@
       "date": "2026-09-22",
       "time": "02:00",
       "price": "1200",
-      "status": "active",
+      "status": "completed",
       "id": "75FVSetwV1c"
+    },
+    {
+      "name": "sameer",
+      "from": "dehli",
+      "to": "chandigarh",
+      "passengers": "2",
+      "date": "2026-09-22",
+      "time": "12:00",
+      "price": "500",
+      "status": "completed",
+      "id": "WbvVfDh9UMU"
+    },
+    {
+      "name": "sameer",
+      "from": "panchkula",
+      "to": "chandigarh",
+      "passengers": "2",
+      "date": "2026-09-22",
+      "time": "22:00",
+      "price": "500",
+      "status": "completed",
+      "id": "-5xgdpehEkM"
+    },
+    {
+      "name": "sameer",
+      "from": "pinjore",
+      "to": "baddi",
+      "passengers": "4",
+      "date": "2026-09-22",
+      "time": "20:00",
+      "price": "1000",
+      "status": "booked",
+      "id": "e8sv4MCE7PU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

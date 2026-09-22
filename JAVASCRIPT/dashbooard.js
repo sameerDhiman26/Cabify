@@ -109,6 +109,32 @@ if (e.target.classList.contains("wallet-btn")) {
 }
 });
 
+homePage.addEventListener("click",(e)=>{
+  e.preventDefault();
+
+  if (e.target.classList.contains("find-btn")) {
+    findRide.style.display = "block";
+    tripPage.style.display = "none";
+    homePage.style.display = "none";
+    offerRide.style.display = "none";
+    settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
+    // e.target.classList.add("active");
+  }
+
+  if (e.target.classList.contains("offer-btn")) {
+    findRide.style.display = "none";
+    homePage.style.display = "none";
+    tripPage.style.display = "none";
+    offerRide.style.display = "block";
+    settingsPage.style.display = "none";
+    messagePage.style.display = "none";
+walletPage.style.display = "none";
+    // e.target.classList.add("active");
+  }
+})
+
 // ==========================================
 // USER
 // ==========================================
@@ -162,19 +188,27 @@ if (publishBtn) {
       return;
     }
 
-    const from = fromInput.value.trim();
-    const to = toInput.value.trim();
+    
+    // console.log(fromInput.value);
+    const from = fromInput.value;
+    const to = toInput.value;
     const seats = seatsInput.value;
     const price = priceInput.value;
     const date = dateInput.value;
     const time = timeInput.value;
+
 
     if (!from || !to || !seats || !price || !date || !time) {
       alert(" Please fill all the fields.");
       return;
     }
 
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    let name = user.name;
+
+
     const offerRideData = {
+      name,
       from,
       to,
       passengers: seats,
