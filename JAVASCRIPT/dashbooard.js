@@ -119,6 +119,7 @@ let user = localStorage.getItem("currentUser");
 if (user) {
   user = JSON.parse(user);
 
+
   // Welcome message
   let welcomeLine = document.getElementById("welcomeLine");
   welcomeLine.innerHTML = `Welcome Back, ${user.name} `;
