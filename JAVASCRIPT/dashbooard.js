@@ -21,7 +21,6 @@ sidebar.addEventListener("click", (e) => {
   document.querySelectorAll(".menu-item").forEach((menu) => {
     menu.classList.remove("active");
   });
- 
 
   // HOME
   if (e.target.classList.contains("home-btn")) {
@@ -31,7 +30,7 @@ sidebar.addEventListener("click", (e) => {
     findRide.style.display = "none";
     settingsPage.style.display = "none";
     messagePage.style.display = "none";
-walletPage.style.display = "none";
+    walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -43,7 +42,7 @@ walletPage.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "none";
     messagePage.style.display = "none";
-walletPage.style.display = "none";
+    walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -55,7 +54,7 @@ walletPage.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "none";
     messagePage.style.display = "none";
-walletPage.style.display = "none";
+    walletPage.style.display = "none";
     e.target.classList.add("active");
   }
 
@@ -67,10 +66,10 @@ walletPage.style.display = "none";
     offerRide.style.display = "block";
     settingsPage.style.display = "none";
     messagePage.style.display = "none";
-walletPage.style.display = "none";
+    walletPage.style.display = "none";
     e.target.classList.add("active");
   }
- 
+
   if (e.target.classList.contains("settings-btn")) {
     homePage.style.display = "none";
     tripPage.style.display = "none";
@@ -78,37 +77,33 @@ walletPage.style.display = "none";
     offerRide.style.display = "none";
     settingsPage.style.display = "block";
     messagePage.style.display = "none";
-walletPage.style.display = "none";
+    walletPage.style.display = "none";
     e.target.classList.add("active");
   }
   if (e.target.classList.contains("message-btn")) {
+    homePage.style.display = "none";
+    tripPage.style.display = "none";
+    findRide.style.display = "none";
+    offerRide.style.display = "none";
+    settingsPage.style.display = "none";
+    walletPage.style.display = "none";
 
-  homePage.style.display = "none";
-  tripPage.style.display = "none";
-  findRide.style.display = "none";
-  offerRide.style.display = "none";
-  settingsPage.style.display = "none";
-  walletPage.style.display = "none";
+    messagePage.style.display = "block";
 
-  messagePage.style.display = "block";
+    e.target.classList.add("active");
+  }
+  if (e.target.classList.contains("wallet-btn")) {
+    homePage.style.display = "none";
+    tripPage.style.display = "none";
+    findRide.style.display = "none";
+    offerRide.style.display = "none";
+    settingsPage.style.display = "none";
+    messagePage.style.display = "none";
 
-  e.target.classList.add("active");
-  
-}
-if (e.target.classList.contains("wallet-btn")) {
+    walletPage.style.display = "block";
 
-  homePage.style.display = "none";
-  tripPage.style.display = "none";
-  findRide.style.display = "none";
-  offerRide.style.display = "none";
-  settingsPage.style.display = "none";
-  messagePage.style.display = "none";
-
-  walletPage.style.display = "block";
-
-  e.target.classList.add("active");
- 
-}
+    e.target.classList.add("active");
+  }
 });
 
 // ==========================================
@@ -118,7 +113,6 @@ if (e.target.classList.contains("wallet-btn")) {
 let user = localStorage.getItem("currentUser");
 if (user) {
   user = JSON.parse(user);
-
 
   // Welcome message
   let welcomeLine = document.getElementById("welcomeLine");
