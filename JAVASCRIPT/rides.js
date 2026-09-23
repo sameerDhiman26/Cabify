@@ -183,7 +183,8 @@ function displayRides(RideData) {
 
         let card = document.createElement("div");
         card.classList.add("findride-card");
-
+        console.log("e")
+        console.log(e)
         let userIcon = e.name[0];
 
         card.innerHTML = `
