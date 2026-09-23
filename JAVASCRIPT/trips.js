@@ -80,12 +80,20 @@ function draw_Trips(rides) {
 }
 
 async function filterTrips(status) {
-  
+
     let rides = await getTrips();
-    let s_rides = rides.filter((r) => r.status === status)
+
+    let currentUser = JSON.parse(
+        localStorage.getItem("currentUser")
+    );
+
+    let s_rides = rides.filter((r) =>
+        r.status === status &&
+        r.name === currentUser.name
+    );
+
     return s_rides;
 }
-
 async function cancelTrip(id) {
     
     let res = await fetch(`http://localhost:3000/ride/${id}`,{
